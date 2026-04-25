@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Share Your Idea</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial, Helvetica, sans-serif;
+background:linear-gradient(-45deg,#141e30,#243b55,#0f2027,#1e3c72);
+background-size:400% 400%;
+animation:bgmove 10s infinite ease;
+color:white;
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:100vh;
+flex-direction:column;
+text-align:center;
+padding:20px;
+}
+
+/* moving gradient background */
+
+@keyframes bgmove{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+/* Heading */
+
+h2{
+font-size:34px;
+margin-bottom:35px;
+line-height:1.4;
+letter-spacing:1px;
+text-shadow:0 0 15px rgba(255,255,255,0.4);
+}
+
+h2 span{
+color:#ff3b3b;
+text-shadow:0 0 20px red;
+}
+
+/* Form Box */
+
+.form-box{
+background:rgba(255,255,255,0.10);
+backdrop-filter:blur(18px);
+padding:45px;
+border-radius:22px;
+box-shadow:0 25px 60px rgba(0,0,0,0.7);
+width:380px;
+max-width:90%;
+display:flex;
+flex-direction:column;
+gap:20px;
+border:1px solid rgba(255,255,255,0.15);
+transition:0.3s;
+}
+
+.form-box:hover{
+transform:scale(1.02);
+}
+
+/* Label */
+
+label{
+font-size:18px;
+text-align:left;
+font-weight:bold;
+}
+
+/* Textarea */
+
+textarea{
+padding:15px;
+border:none;
+border-radius:12px;
+resize:none;
+height:130px;
+font-size:15px;
+font-family:Arial;
+outline:none;
+transition:0.3s;
+background:rgba(255,255,255,0.9);
+}
+
+/* Focus effect */
+
+textarea:focus{
+box-shadow:0 0 15px #ff3b3b;
+}
+
+/* Submit button */
+
+button{
+padding:15px;
+border:none;
+border-radius:12px;
+background:linear-gradient(45deg,#ff416c,#ff4b2b);
+color:white;
+font-size:17px;
+cursor:pointer;
+transition:0.3s;
+font-weight:bold;
+box-shadow:0 6px 25px rgba(0,0,0,0.6);
+}
+
+button:hover{
+transform:scale(1.08);
+box-shadow:0 12px 35px rgba(0,0,0,0.9);
+}
+
+/* HOME BUTTON */
+
+.home{
+margin-top:40px;
+padding:14px 35px;
+background:linear-gradient(45deg,#ffd700,#ffb347);
+color:black;
+text-decoration:none;
+font-weight:bold;
+border-radius:40px;
+font-size:16px;
+transition:0.3s;
+box-shadow:0 6px 25px rgba(0,0,0,0.6);
+}
+
+.home:hover{
+transform:scale(1.12);
+box-shadow:0 12px 40px rgba(0,0,0,0.9);
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h2>
+<span>Got an idea that could solve a problem?</span><br>
+Share it with us.
+</h2>
+
+<form class="form-box" action="https://formspree.io/f/xkoqagkq" method="POST">
+
+<label>Your Idea</label>
+
+<textarea name="idea" placeholder="Write your idea here..." required></textarea>
+
+<button type="submit">Submit Idea 🚀</button>
+
+</form>
+
+<a href="{{ url_for('home') }}" class="home">HOME</a>
+
+</body>
+
+</html> 

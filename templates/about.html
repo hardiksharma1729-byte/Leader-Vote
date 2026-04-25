@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About NUMYPIE</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial, Helvetica, sans-serif;
+background:linear-gradient(135deg,#0f172a,#020617,#1e293b);
+color:white;
+min-height:100vh;
+display:flex;
+flex-direction:column;
+}
+
+/* HEADER BRAND */
+
+.brand{
+background:black;
+color:white;
+text-align:center;
+padding:20px;
+font-size:38px;
+font-weight:bold;
+letter-spacing:3px;
+box-shadow:0 5px 25px rgba(0,0,0,0.8);
+}
+
+/* Logo */
+
+.logo{
+width:32px;
+vertical-align:middle;
+margin-left:5px;
+}
+
+/* Main container */
+
+.container{
+max-width:900px;
+margin:80px auto;
+padding:60px;
+background:rgba(255,255,255,0.06);
+border-radius:18px;
+border:1px solid rgba(255,255,255,0.15);
+backdrop-filter:blur(15px);
+box-shadow:0 0 40px rgba(0,0,0,0.8);
+transition:0.4s;
+}
+
+.container:hover{
+transform:scale(1.02);
+}
+
+/* Heading */
+
+h1{
+text-align:center;
+font-size:45px;
+color:#ff2e63;
+margin-bottom:30px;
+text-shadow:0 0 20px rgba(255,0,0,0.6);
+animation:glow 2s infinite alternate;
+}
+
+@keyframes glow{
+from{ text-shadow:0 0 10px red; }
+to{ text-shadow:0 0 30px #ff2e63; }
+}
+
+/* Paragraph */
+
+p{
+font-size:18px;
+line-height:1.9;
+text-align:justify;
+color:#e5e7eb;
+}
+
+/* HOME BUTTON */
+
+.home-center{
+text-align:center;
+margin-top:40px;
+}
+
+.home{
+padding:14px 35px;
+background:linear-gradient(45deg,#ffd700,#ffb347);
+color:black;
+text-decoration:none;
+font-weight:bold;
+border-radius:40px;
+font-size:16px;
+transition:0.3s;
+box-shadow:0 6px 25px rgba(0,0,0,0.6);
+}
+
+.home:hover{
+transform:scale(1.12);
+box-shadow:0 12px 40px rgba(0,0,0,0.9);
+}
+
+/* Footer */
+
+footer{
+margin-top:auto;
+background:#020617;
+text-align:center;
+padding:25px;
+font-size:14px;
+color:#d1d5db;
+border-top:1px solid rgba(255,255,255,0.1);
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- BRAND HEADER -->
+
+<div class="brand">
+NUMY
+<img class="logo"
+src="https://e7.pngegg.com/pngimages/324/861/png-clipart-pi-icons-logos-emojis-mathematical-signs-thumbnail.png">
+</div>
+
+<!-- CONTENT -->
+
+<div class="container">
+
+<h1>About</h1>
+
+<p>
+
+<span>
+NUMY
+<img class="logo"
+src="https://e7.pngegg.com/pngimages/324/861/png-clipart-pi-icons-logos-emojis-mathematical-signs-thumbnail.png">
+</span>
+
+Vote Battle is your ultimate random voting playground where you click what you like most between any two options!
+
+<br><br>
+
+Simple: Two choices → **Click your favorite** → Watch live vote counts update instantly for everyone. Pure fun, no complicated ratings!
+
+<br><br>
+
+Whether it's **pizza vs burger**, **cats vs dogs**, or **any random matchup** – our platform makes voting addictive and shows real-time crowd favorites.
+
+<br><br>
+
+**Zero setup needed**. Persistent storage keeps votes forever.
+
+<br><br>
+
+**Made for fun** by fans, for fans. **Drop specific feedback** to add your dream features!
+</p>
+
+<div class="home-center">
+<a href="{{ url_for('home') }}" class="home">HOME</a>
+</div>
+
+</div>
+
+<footer>
+<b>
+© 2026 NUMY. This project is open and free to use for educational purposes.
+No copyright restrictions intended. IPL team logos and names belong to their respective owners.
+</b>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NUMY PIE - EPIC IDEOLOGY BATTLE 🔥💥</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800;900&family=Montserrat:wght@400;700;900&display=swap"
+        rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #ff0066;
+            --secondary: #00d4ff;
+            --yellow: #ffcc00;
+            --dark-bg: #000000;
+            --card-bg: rgba(10, 10, 20, 0.95);
+            --glass-bg: rgba(255, 255, 255, 0.04);
+            --neon-border: #ff0066;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        *::selection {
+            background: #ff0066;
+            color: #fff;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: var(--dark-bg);
+            color: #fff;
+            text-align: center;
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* SEXY CINEMATIC BACKGROUND */
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            background:
+                radial-gradient(circle at 10% 60%, rgba(255, 0, 102, 0.15), transparent 50%),
+                radial-gradient(circle at 90% 30%, rgba(0, 212, 255, 0.15), transparent 50%),
+                radial-gradient(circle at 50% 50%, rgba(255, 204, 0, 0.08), transparent 60%);
+            z-index: -1;
+            animation: bgShift 20s ease-in-out infinite alternate;
+        }
+
+        @keyframes bgShift {
+            0%, 100% {
+                opacity: 0.7;
+                background-size: auto;
+            }
+            50% {
+                opacity: 0.9;
+            }
+        }
+
+        /* HEADER - SLEEK CINEMATIC */
+        header {
+            background: var(--card-bg);
+            backdrop-filter: blur(40px);
+            border-bottom: 3px solid var(--primary);
+            padding: 25px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 2rem;
+            font-weight: 800;
+            letter-spacing: 4px;
+            color: var(--primary);
+            box-shadow: 0 30px 80px rgba(255, 0, 102, 0.3);
+        }
+
+        .logo-title {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .logo-title span {
+            font-size: 2.5rem;
+            color: #fff;
+            letter-spacing: 3px;
+            background: linear-gradient(45deg, #ff0066, #ff4d6d, #ff8e53);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 20px rgba(255, 0, 102, 0.6);
+        }
+
+        .logo-title img {
+            width: 60px;
+            filter: drop-shadow(0 0 15px #ff0066);
+        }
+
+        .header-stats {
+            background: var(--glass-bg);
+            backdrop-filter: blur(30px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 12px;
+            padding: 10px 20px;
+            font-size: 1rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .header-stats span {
+            color: var(--secondary);
+        }
+
+        /* EPIC QUESTION TEXT */
+        .question {
+            font-size: 3rem;
+            font-weight: 900;
+            margin: 60px 0;
+            letter-spacing: 4px;
+            color: #fff;
+            text-shadow: 0 0 20px rgba(255, 0, 102, 0.8);
+            animation: floatText 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes floatText {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-5px);
+            }
+        }
+
+        /* BATTLE ARENA (SHAPE + SPACING) */
+        .battle-box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 80px;
+            margin: 80px 0;
+            flex-wrap: wrap;
+        }
+
+        .team {
+            position: relative;
+            width: 280px;
+            background: var(--card-bg);
+            backdrop-filter: blur(40px);
+            border-radius: 30px;
+            padding: 30px 20px;
+            cursor: pointer;
+            border: 2px solid transparent;
+            transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.7);
+        }
+
+        .team::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            border-radius: 30px;
+            opacity: 0;
+            transition: opacity 0.5s;
+        }
+
+        .team:hover::before {
+            opacity: 1;
+        }
+
+        .team:hover {
+            transform: translateY(-20px) scale(1.05);
+            border-color: var(--primary);
+            box-shadow: 0 40px 100px rgba(255, 0, 102, 0.6);
+        }
+
+        .team:active {
+            transform: scale(0.95);
+        }
+
+        .team img {
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 24px;
+            border: 4px solid rgba(255, 0, 102, 0.4);
+            box-shadow: 0 20px 60px rgba(255, 0, 102, 0.5);
+            transition: transform 0.3s;
+            filter: brightness(0.95) saturate(0.9);
+        }
+
+        .team:hover img {
+            transform: scale(1.05) rotate(3deg);
+            filter: brightness(1.1) saturate(1.1);
+        }
+
+        .team-name {
+            font-size: 1.8rem;
+            font-weight: 800;
+            font-family: 'Montserrat', sans-serif;
+            letter-spacing: 1px;
+            color: #fff;
+        }
+
+        .team-name.bhagat {
+            color: #ff6666;
+        }
+
+        .team-name.mahatma {
+            color: #00d4ff;
+        }
+
+        /* VS BOX */
+        .or-box {
+            font-size: 3rem;
+            font-weight: 900;
+            letter-spacing: 3px;
+            color: #fff;
+            background: linear-gradient(45deg, #ff0066, #ff4d00, #ffcc00);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 0 20px rgba(255, 0, 102, 0.8);
+            padding: 20px 40px;
+            border-radius: 40px;
+            display: inline-block;
+        }
+
+        /* RESULTS MESSAGE */
+        .vote-msg {
+            margin: 30px 0;
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #00ff88;
+            text-shadow: 0 0 15px #00ff88;
+            display: none;
+        }
+
+        /* CTA SECTION */
+        .cta-section {
+            margin: 60px 0;
+            padding: 40px 30px;
+            background: var(--card-bg);
+            backdrop-filter: blur(40px);
+            border-radius: 25px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .cta-section h2 {
+            font-size: 2rem;
+            color: #ff0066;
+            text-shadow: 0 0 15px rgba(255, 0, 102, 0.7);
+            margin-bottom: 15px;
+        }
+
+        .cta-email {
+            font-size: 1.4rem;
+            color: #00ff88;
+            background: rgba(0, 255, 136, 0.15);
+            border: 2px solid #00ff88;
+            padding: 15px 35px;
+            border-radius: 50px;
+            display: inline-block;
+            margin: 20px 0;
+            box-shadow: 0 10px 40px rgba(0, 255, 136, 0.4);
+        }
+
+        .links {
+            margin: 50px 0 40px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .links a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 1.2rem;
+            font-weight: 600;
+            padding: 15px 30px;
+            border-radius: 40px;
+            background: linear-gradient(45deg, #ff0066, #ff4d6d, #ff8e53);
+            box-shadow: 0 15px 40px rgba(255, 0, 102, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        .links a:hover {
+            transform: translateY(-3px) scale(1.05) rotate(1deg);
+            box-shadow: 0 25px 60px rgba(255, 0, 102, 0.8);
+        }
+
+        /* DISABLED VOTE STATE */
+        .disabled-vote {
+            opacity: 0.6;
+            pointer-events: none;
+            border-color: rgba(255, 255, 255, 0.25);
+        }
+
+        .disabled-vote img {
+            filter: grayscale(1) brightness(0.7);
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .battle-box {
+                flex-direction: column;
+                gap: 40px;
+            }
+            header {
+                flex-direction: column;
+                gap: 15px;
+                padding: 20px;
+            }
+            .question {
+                font-size: 2.2rem;
+            }
+            .team {
+                width: 260px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="logo-title">
+            <span>NUMY PIE</span>
+            <img src="https://e7.pngegg.com/pngimages/324/861/png-clipart-pi-icons-logos-emojis-mathematical-signs-thumbnail.png"
+                 alt="Pi logo" />
+        </div>
+        <div class="header-stats">
+            <span>⚔️ Bhagat:</span> <span id="bhagatClicks">0</span>
+            <span>🕊️ Gandhi:</span> <span id="mahatmaClicks">0</span>
+        </div>
+    </header>
+
+    <!-- QUESTION -->
+    <div class="question">
+        🌍 Whose ideology is BEST for India & World?
+    </div>
+
+    <!-- BATTLE ARENA -->
+    <div class="battle-box">
+        <button class="team" id="team1" onclick="vote('bhagat')">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Bhagat_Singh_1929.jpg/250px-Bhagat_Singh_1929.jpg"
+                 alt="Shaheed Bhagat Singh" />
+            <div class="team-name bhagat">⚔️ SHAHEED BHAGAT SINGH</div>
+        </button>
+
+        <div class="or-box">⚔️ VS ⚔️</div>
+
+        <button class="team" id="team2" onclick="vote('mahatma')">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Mahatma-Gandhi%2C_studio%2C_1931.jpg/1280px-Mahatma-Gandhi%2C_studio%2C_1931.jpg"
+                 alt="Mahatma Gandhi" />
+            <div class="team-name mahatma">🕊️ Mohandas Karamchand Gandhi</div>
+        </button>
+    </div>
+
+    <div id="voteStatus" class="vote-msg"></div>
+
+    <!-- CTA -->
+    <div class="cta-section">
+        <h2>Stay Tuned 🚀</h2>
+        <p>Follow the project, share feedback, and send epic ideas.</p>
+        <div class="cta-email">📧 numypie1782@gmail.com</div>
+    </div>
+
+    <!-- LINKS -->
+    <div class="links">
+        <a href="/about.html"><i class="fas fa-info-circle"></i> ABOUT</a>
+        <a href="/feedback.html"><i class="fas fa-comment-dots"></i> FEEDBACK</a>
+        <a href="/contact.html"><i class="fas fa-envelope"></i> CONTACT</a>
+        <a href="/idea.html"><i class="fas fa-lightbulb"></i> IDEAS</a>
+    </div>
+
+    <script>
+        // Check Flask live stats and update counts
+        function updateLiveStats() {
+            fetch("/live-stats")
+                .then(r => r.json())
+                .then(data => {
+                    document.getElementById("bhagatClicks").textContent = data.bhagat_clicks ?? 0;
+                    document.getElementById("mahatmaClicks").textContent = data.mahatma_clicks ?? 0;
+                })
+                .catch(() => {
+                    document.getElementById("bhagatClicks").textContent = "N/A";
+                    document.getElementById("mahatmaClicks").textContent = "N/A";
+                });
+        }
+
+        // Lock vote UI after one vote (page refresh = vote again)
+        function lockVotes(choice) {
+            team1.classList.add("disabled-vote");
+            team2.classList.add("disabled-vote");
+            const voteStatus = document.getElementById("voteStatus");
+            voteStatus.textContent = `${choice === 'bhagat' ? '⚔️' : '🕊️'} You voted for ${choice === 'bhagat' ? 'Bhagat Singh' : 'Mahatma Gandhi'}!`;
+            voteStatus.style.display = "block";
+            updateLiveStats();
+        }
+
+        // Vote handler (works with your app.py)
+        function vote(team) {
+            const btn = event.target.closest(".team");
+            btn.style.transform = "scale(0.95)";
+            setTimeout(() => btn.style.transform = "", 200);
+
+            fetch("/vote", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ team: team })
+            })
+            .then(r => r.json())
+            .then(data => {
+                if (data.status === "success") {
+                    lockVotes(team);
+                } else {
+                    alert("Vote error. Please try again.");
+                }
+            })
+            .catch(err => {
+                console.error(err);
+                lockVotes(team); // still update UI for UX
+            });
+        }
+
+        // On page load
+        window.addEventListener("load", () => {
+            // Update stats on page load + every 3 sec
+            updateLiveStats();
+            setInterval(updateLiveStats, 3000);
+        });
+    </script>
+</body>
+</html>
+``
